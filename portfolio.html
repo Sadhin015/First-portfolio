@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Playwrite+NZ:wght@100..400&family=Playwrite+PT:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 3px 5px 0px rgba(224, 233, 227, 0.69);
+            /*text-shadow: 3px 5px 0px rgba(27, 23, 23, 0.6);*/
+            font-family: "Playwrite NZ", cursive
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: "Playwrite MX", cursive;
+        }
+
+        a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 10px;
+        }
+
+        .navbar {
+            background-color: rgb(6, 80, 82);
+            position: relative;
+            text-align: center;
+            border: 5px solid black;
+        }
+
+        .navpic {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+
+        }
+
+        .logo {
+            position: absolute;
+            top: -15px;
+            left: -200px;
+        }
+
+        .navbar h1 {
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            margin: 0px;
+
+        }
+
+        .navmenu {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+
+        .navmenu a {
+            margin: 7px 0px;
+            padding: 10px;
+            background-color: rgb(4, 39, 73);
+            border-radius: 15px;
+        }
+
+        .navmenu a:hover {
+            background-color: rgb(158, 165, 177);
+        }
+
+        /*for desktop*/
+        @media screen and (min-width:992px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            .navbar {
+                position: relative;
+            }
+
+            .logo {
+                text-align: left;
+                position: absolute;
+                left: 10px;
+                top: 2px;
+            }
+
+            .navpic {
+                width: 120px;
+                height: 120px;
+                border: 2px solid black;
+                border-radius: 50%;
+            }
+
+            .navheading h1 {
+                text-align: middle;
+                padding-top: 10px;
+                margin: 0px;
+            }
+
+            .navmenu {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .navmenu a {
+                padding: 5px 10px;
+                margin: 20px 0px;
+                gap: 10px;
+                background-color: transparent;
+            }
+
+            .profile .top-icon {
+                top: 20px;
+                right: 20px;
+                width: 120px;
+                height: 110px;
+
+            }
+
+            .profile .top-icon:hover {
+                width: 140px;
+                height: 130px;
+            }
+
+            .profile .bottom-icon:hover {
+                width: 140px;
+                height: 130px;
+            }
+
+            .professional-experience {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .achievement-contact {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+
+        .navbar::after {
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+
+
+
+
+        [class*="col-"] {
+            width: 100%;
+
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: justify;
+            font-family: "Playwrite US Trad", cursive;
+        }
+
+        .profile {
+            padding: 60px 10px;
+            text-align: center;
+            position: relative;
+            background-color: rgb(208, 181, 148);
+            border: 5px solid black;
+            border-top: none;
+        }
+
+        .profile .top-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 60px;
+            transition: transform 1s;
+        }
+
+        .profile .top-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        .profile .bottom-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 5px;
+            width: 80px;
+            height: 70px;
+            transition: transform 1s;
+        }
+
+        .profile .bottom-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        .des p {
+            margin: 0 auto 20px auto;
+            text-align: center;
+            color: rgb(98, 122, 139);
+            width: 90%
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        #aboutme-id {
+            background-color: #407e6a;
+            padding: 1% 7%;
+            color: #fcf6f6;
+            text-align: center;
+            border: 4px solid black;
+            border-top: none;
+
+        }
+
+        .aboutme .aboutme-image {
+            background-color: #407e6a;
+        }
+
+        .aboutme::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        hr {
+            border: 2px solid black;
+            box-shadow: 16px 9px 10px 0px rgba(10, 9, 10, 0.78);
+        }
+
+        .aboutme-image img {
+            border: 5px solid white;
+            border-radius: 50%;
+            height: 140px;
+            width: 130px;
+        }
+
+        .aboutme p {
+            text-align: center;
+        }
+
+        .aboutme a {
+            font-size: 1.2rem;
+            color: rgb(213, 206, 206)
+        }
+
+        .cv-button {
+            background-color: darkkhaki;
+            color: rgb(15, 15, 16);
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bolder;
+            cursor: pointer;
+            margin: 10px;
+
+        }
+
+        .cv-button:hover {
+            box-shadow: 0 4px 10px 10px rgb(7, 6, 6);
+        }
+
+        .aboutme-desc {
+            background-color: #264c40;
+            box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.75);
+            border-radius: 20px;
+        }
+
+        .professional-experience {
+            padding: 1% 2%;
+            background-color: rgb(186, 159, 139);
+            border: 5px solid black;
+            border-top: none;
+        }
+
+        .professional-experience::after {
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+
+        .professional-experience .card {
+            background-color: chocolate;
+            border-radius: 20px;
+            padding: 15px;
+            margin-top: 35px;
+            transition: 0.3s;
+            height: 600px;
+
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px 10px black;
+
+        }
+
+        .card-icon {
+            text-align: center;
+        }
+
+        .rounded-img {
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            padding: 15px;
+        }
+
+        .card-title h2 {
+            background-color: burlywood;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .skill-container {
+            padding-right: 45px;
+        }
+
+        .skill-container li {
+            list-style: none;
+            font-weight: bolder;
+            margin: 25px 0px;
+            position: relative;
+        }
+
+        .skill-container li::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: #7cb8a5;
+            top: 25px;
+            border-radius: 1000px;
+        }
+
+        .skill-container li::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 10px;
+            background-color: #152e26;
+            top: 25px;
+            left: 0%;
+            border-radius: 1000px;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+
+        .skill-container li.html::after {
+            animation-name: html;
+        }
+
+        @keyframes html {
+            to {
+                width: 90%;
+            }
+        }
+
+        .skill-container li.css::after {
+            animation-name: css;
+        }
+
+        @keyframes css {
+            to {
+                width: 80%;
+            }
+        }
+
+        .skill-container li.javascript::after {
+            animation-name: javascript;
+        }
+
+        @keyframes javascript {
+            to {
+                width: 30%;
+            }
+        }
+
+        .skill-container li.bootstrap::after {
+            animation-name: bootstrap;
+        }
+
+        @keyframes bootstrap {
+            to {
+                width: 20%;
+            }
+        }
+
+        .skill-container li.jquery::after {
+            animation-name: jquery;
+        }
+
+        @keyframes jquery {
+            to {
+                width: 25%;
+            }
+        }
+
+        .skill-container li.express::after {
+            animation-name: express;
+        }
+
+        @keyframes express {
+            to {
+                width: 40%;
+            }
+        }
+
+        .skill-container li.github::after {
+            animation-name: express;
+        }
+
+        @keyframes github {
+            to {
+                width: 45%;
+            }
+        }
+
+        .achievement-contact {
+            padding: 1% 7%;
+            background-color: bisque;
+            border: 5px solid black;
+            border-top: none;
+        }
+
+        .achievement-contact::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .contact {
+            text-align: center;
+
+        }
+
+        .social {
+            background-color: rgb(158, 168, 175);
+            margin-top: 30px;
+            padding-bottom: 20px;
+            border-radius: 50px;
+        }
+
+        .contact p {
+            text-align: center;
+        }
+
+        .contact input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            resize: none;
+        }
+
+        .contact button {
+            border: none;
+            border-radius: 10px;
+            background-color: #264c40;
+            color: #fcf6f6;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        button:hover {
+            box-shadow: 0 4px 20px 5px rgb(7, 6, 6);
+        }
+
+        .contact-link {
+            text-align: center;
+        }
+
+        .btn {
+            border: none;
+            padding: 5px;
+            font-size: 3rem;
+            border-radius: 10px;
+            background-color: #fffffd;
+            color: rgb(13, 13, 175);
+            margin-top: 10px;
+        }
+
+        .btn1 {
+            border: none;
+            padding: 5px 10px;
+            font-size: 3rem;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .btn2 {
+            border: none;
+            padding: 5px 10px;
+            font-size: 3rem;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .btn3 {
+            border: none;
+            padding: 5px 10px;
+            font-size: 3rem;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .achievement p {
+            font-size: 0.8rem;
+        }
+
+        .footer {
+            background-color: rgb(93, 78, 59);
+            padding: 1% 0%;
+            color: #fcf6f6;
+            border: 5px solid black;
+            border-top: none;
+        }
+
+        .footer::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .footer-desc p {
+            text-align: center;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+
+        .credit {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo col-2">
+            <img class="navpic" src="sadhin.jpeg" alt="pic">
+        </div>
+
+        <div class="navheading col-4">
+            <h1 class="name">Arefin Sadhin</h1>
+        </div>
+
+        <div class="navmenu col-6">
+            <a href="#profile-id">Home</a>
+            <a href="#skills">Skill</a>
+            <a href="#aboutme-id">About me</a>
+            <a href="#contact-link-id">Contact</a>
+        </div>
+    </div>
+
+    <div class="profile" id="profile-id">
+        <img class="top-icon" src=" computer.png" alt="pic">
+        <div class="des">
+            <h1>I am an IT student <br>&<br>Learning front-end</h1>
+            <p> Aspiring IT student with a passion for innovative technology solutions and
+                a strong foundation in
+                computer science. Proficient in coding languages such as Python, Java, and C++, and experienced in
+                network security, database management, and software development.
+                Eager to leverage skills in coding,
+                problem-solving, and project management to drive impactful tech projects and contribute to cutting-edge
+                advancements in the IT industry.
+            </p>
+        </div>
+        <img class="bottom-icon" src="it-service.png" alt="pic">
+    </div>
+
+
+    <div class="aboutme" id="aboutme-id">
+        <h2>ABOUT ME</h2>
+        <hr>
+        <div class="aboutme-image col-6">
+            <img src="sadhin.jpeg" alt="sadhin">
+        </div>
+
+        <div class="aboutme-desc col-6">
+            <p>
+                I'm a dedicated IT student with a passion for technology and innovation.
+            </p>
+            <p>
+                My expertise includes programming, network management, and cybersecurity, and I thrive on solving
+                complex
+                problems.
+            </p>
+            <p>I'm constantly expanding my knowledge through hands-on projects and staying updated with
+                the latest industry trends. I'm eager to leverage my skills in a dynamic environment to drive
+                technological
+                advancements and deliver impactful solutions.
+            </p>
+            <hr>
+            <p>Name:Arefin sadhin</p>
+            <hr>
+            <p>Address:YKSG-2, DIU</p>
+            <hr>
+            <p>Email:<a href="arefin2305191015@diu.edu.bd"> Arefin Sadhin-DIU</a></p>
+            <hr>
+            <p>Phone:<a href="tel:+8801787931039"> 01787931039</a></p>
+            <hr>
+            <p>Phone:<a href="#" target=" blank"> www.AS.com</a></p>
+            <hr>
+            <p>CV:
+                <a href="https://drive.google.com/file/d/1C3Mqxvp_xEI-WDup9xefUZ3-npIbxm8u/view?usp=drive_link"
+                    target="blank" download="">
+                    <button class="cv-button">
+                        Download CV
+                    </button>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="professional-experience" id="skills">
+        <div class="work-experience col-4">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="working.png" alt="w-icon">
+                </div>
+
+                <div class="card-title">
+                    <h2>WORK EXPERIENCE</h2>
+                </div>
+
+                <div class="card-desc">
+                    <ol>
+                        <li>
+                            <strong>web and mobile application developer</strong> <br>
+                            Broadcom Inc. Company <br>
+                            New York, USA <br>
+                            09/2023 - 12/2023
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>full-stack developer</strong> <br>
+                            Oracle Corp. <br>
+                            New York, USA <br>
+                            12/2023 - 06/2024
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Technical Copywriter & SEO Consultant</strong> <br>
+                            Nvidia Corp. <br>
+                            New York, USA <br>
+                            07/2024 - 12/2024
+                        </li>
+                        <hr>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="education col-4">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="mortarboard.png" alt="E-icon">
+                </div>
+
+                <div class="card-title">
+                    <h2>EDUCATION</h2>
+                </div>
+
+                <div class="card-desc">
+                    <ol>
+                        <li>
+                            <strong>Bsc in ITM</strong> <br>
+                            Daffodil International University<br>
+                            DSC,ASHULIA,SAVAR<br>
+                            06-2023 to 06-2027
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>HSC</strong> <br>
+                            Kushtia Govt. College<br>
+                            Kushtia<br>
+                            04/2018 - 04/2020
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>SSC</strong> <br>
+                            Meherpur Govt. High School<br>
+                            Meherpur<br>
+                        </li>
+                        <hr>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill col-4">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="skill.png" alt="E-icon">
+                </div>
+
+                <div class="card-title">
+                    <h2>SKILLS</h2>
+                </div>
+
+                <div class="card-desc">
+                    <div class="skill-container">
+                        <ul>
+                            <li class="html">HTML</li>
+                            <li class="css">CSS</li>
+                            <li class="javascript">JAVASCRIPT</li>
+                            <li class="bootstrap">BOOTSTRAP</li>
+                            <li class="jquery">JQUERY</li>
+                            <li class="express">EXPRESS</li>
+                            <li class="github">GITHUB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement-contact">
+        <div class="achievement col-4">
+            <h2>ACHIEVEMENT</h2>
+            <hr>
+            <p>1.Spearhead end-to-end mobile web development using Python, Ruby, Amber, and React to build front-end
+                architecture, back-end applications, and user interface, using an iterative Scrum-based approach
+            </p>
+            <p>
+                2.Wrote code using PHP on Laravel framework; leveraged familiarity with CSS and HTML to ensure seamless
+                front-end content delivery
+            </p>
+            <p>
+                3.Leveraged knowledge of Agile XP practices to enable the build and integration of Snowflake’s new core
+                accounting system, resulting in a 5% reduction in error rates
+            </p>
+        </div>
+
+        <div class="contact col-4">
+            <h2>CONTACT ME</h2>
+            <hr>
+            <form action="arefin2305191015@diu.edu.bd" method="post" enctype="text/plain">
+                <p>
+                    <input type="text" placeholder="Your name" name="name">
+                </p>
+                <p>
+                    <input type="email" placeholder="Your email" name="email">
+                </p>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your can write here"></textarea>
+                <br>
+                <button type="submit">SEND</button>
+                <button type="reset">RESET</button>
+            </form>
+        </div>
+
+        <div class="contact-link col-4" id="contact-link-id">
+            <h2>More way to contact</h2>
+            <hr>
+            <div class="social">
+                <button class="btn" onclick="window.open('https://www.facebook.com/arefin.sadhin.7')"
+                    class="btn request-callback">
+                    <i class="fa-brands fa-facebook fa-flip"></i>
+                </button>
+                <br>
+                <button class="btn1" onclick="window.open('https://www.facebook.com/arefin.sadhin.7')"
+                    class="btn request-callback">
+                    <i class="fa-brands fa-whatsapp fa-bounce" style="color: #057117;"></i>
+                </button>
+                <br>
+                <button class="btn2"
+                    onclick="window.open('https://www.instagram.com/sadhinarefin?igsh=MWl1ZjR1ejc0YnB1OA==')"
+                    class="btn request-callback">
+                    <i class="fa-brands fa-instagram fa-fade" style="color: #630303;"></i>
+                </button>
+                <br>
+                <button class="btn3" onclick="window.open('https://github.com/Sadhin015')" class="btn request-callback">
+                    <i class="fa-brands fa-github fa-shake" style="color: #610868;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-desc">
+            <p>
+                Thanks for coming to my portfolio <span> 💕💕💕</span>
+            </p>
+        </div>
+        <div class="credit">
+            &copy;AREFIN 2024. <br>Developed by Arefin Sadhin
+        </div>
+    </div>
+</body>
+
+</html>
